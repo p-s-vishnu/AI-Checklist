@@ -9,84 +9,26 @@ After hours of searching online for resources to learn AI, I have collated a cur
 > - 🐇 Participating in a competition
 > - 👨‍💻 Open source contribution
 
-
-
-## Computational Linear Algebra 
-
-- [ ] [3Blue1Brown Essence of Linear algebra][2]
-- [ ] [Fast.ai Computational Linear Algebra][1]
-
-
-
-**Additional resources:**
-
-- [Fast Ai discussion forum][3]
-- [MIT OCW Linear algebra](<https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/>)
-- [Project ideas](<https://sites.math.washington.edu/~marshall/math_136/projects/index.html>)
-
-**Course Status:**  In progress
-
-**Link of work:** 
-
-
-
-[1]: https://github.com/fastai/numerical-linear-algebra/blob/master/README.md	"fast ai linear algebra course"
-[2]: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab	"3Blue1Brown playlist"
-[3]: https://forums.fast.ai/c/lin-alg	"fast.ai forums"
-
-
-
-# Calculus
-
-- [ ] [3Blue1Brown Essence of calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
-
-**Course Status:**
-
-**Link of work:**
-
-
-
-# Probability & Statistics
-
-- [ ] [Khan academy](<https://www.khanacademy.org/math/statistics-probability>)
-
-**Other resources:**
-
-[MIT OCW Probability](<https://ocw.mit.edu/resources/res-6-012-introduction-to-probability-spring-2018/>)
-
-**Course Status:**
-
-**Link of work:**
-
-
-
 # Python 
+- [ ] [Introduction]
+- [ ] [Data structures]
 - [ ] [Numpy]
 - [ ] [Pandas]
+- [ ] [Matplotlib]
 
 **Course Status:**
 
 **Link of work:**
 
 [Hacker rank Python badge]
+[Scraping web]
+[Flask python API] 
+[Hacker rank Problem solving badge] 
 
+---
+# Exploratory data analysis 
 
-
-# Algorithm Design and Analysis
-
-- [ ] [University of Penn EdX](https://www.edx.org/course/algorithm-design-analysis-pennx-sd3x)
-
-**Course Status:**
-
-**Link of work:**
-
-[Hacker rank Problem solving badge]
-
-
-
-# Exploratory data analysis
-
-- [ ] 
+- [ ] Visualizations
 
 **Course Status:**
 
@@ -94,8 +36,7 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 [Kaggle kernels]
 
-
-
+---
 # Data extraction and preparation
 
 - [ ] 
@@ -108,8 +49,7 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 [Data using Twitter API]
 
-
-
+---
 # Feature engineering 
 
 - [ ] [Google cloud feature engineering](https://www.coursera.org/learn/feature-engineering)
@@ -118,8 +58,7 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 **Link of work:**
 
-
-
+---
 # Machine learning 
 
 - [ ] [Art and science of ML](https://www.coursera.org/learn/art-science-ml)
