@@ -10,13 +10,14 @@ After hours of searching online for resources to learn AI, I have collated a cur
 > - 👨‍💻 Open source contribution
 
 # Python 
-- [ ] [Introduction]
-- [ ] [Data structures]
-- [ ] [Numpy]
-- [ ] [Pandas]
-- [ ] [Matplotlib]
+- [X] Introduction
+- [ ] Data structures
+- [ ] Numpy
+- [ ] Pandas
+- [ ] Matplotlib
 
 **Course Status:**
+In progress
 
 **Link of work:**
 
