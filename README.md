@@ -10,19 +10,21 @@ After hours of searching online for resources to learn AI, I have collated a cur
 > - 👨‍💻 Open source contribution
 
 # Python 
-- [ ] [Introduction]
-- [ ] [Data structures]
-- [ ] [Numpy]
-- [ ] [Pandas]
-- [ ] [Matplotlib]
+- [ ] Introduction
+- [ ] Data structures
+- [ ] Numpy
+- [ ] Pandas
+- [ ] Matplotlib
 
-**Course Status:**
+**Course Status:** [In progress / Done]
 
 **Link of work:**
+*Example:* [Hackerrank Python badge]
 
-[Hacker rank Python badge]
-[Scraping web]
-[Flask python API] 
+[Python web scraping project]
+
+[Flask API] 
+
 [Hacker rank Problem solving badge] 
 
 ---
@@ -34,7 +36,7 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 **Link of work:**
 
-[Kaggle kernels]
+*Example:* [Kaggle kernels]
 
 ---
 # Data extraction and preparation
@@ -44,8 +46,7 @@ After hours of searching online for resources to learn AI, I have collated a cur
 **Course Status:**
 
 **Link of work:**
-
-[Hacker rank SQL badge]
+*Example:* [Hacker rank SQL badge]
 
 [Data using Twitter API]
 
@@ -67,5 +68,4 @@ After hours of searching online for resources to learn AI, I have collated a cur
 **Course Status:**
 
 **Link of work:**
-
-[Kaggle Expert level]
+*Example:* [Kaggle Expert level]
