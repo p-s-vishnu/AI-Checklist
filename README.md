@@ -15,30 +15,35 @@ After hours of searching online for resources to learn AI, I have collated a cur
 - [ ] Numpy
 - [ ] Pandas
 - [ ] Matplotlib
+  
 
 **Course Status:** [In progress / Done]
 
 **Link of work:**
-*Example:* [Hackerrank Python badge]
 
-[Python web scraping project]
+*Example:* 
 
-[Flask API] 
+[Python web scraping project - Extract image for image recognition model]
 
-[Hacker rank Problem solving badge] 
+[Flask API deploy] 
 
----
+
+
 # Exploratory data analysis 
 
-- [ ] Visualizations
+- [ ] Visualisations
+  
 
-**Course Status:**
+**Course Status:** [In progress / Done]
 
 **Link of work:**
 
-*Example:* [Kaggle kernels]
+*Example:* 
 
----
+[Kaggle kernels: Visualize reasons for depression/suicide] 
+
+
+
 # Data extraction and preparation
 
 - [ ] 
@@ -50,7 +55,8 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 [Data using Twitter API]
 
----
+
+
 # Feature engineering 
 
 - [ ] [Google cloud feature engineering](https://www.coursera.org/learn/feature-engineering)
@@ -59,11 +65,11 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 **Link of work:**
 
----
+
+
 # Machine learning 
 
 - [ ] [Art and science of ML](https://www.coursera.org/learn/art-science-ml)
-- [ ] 
 
 **Course Status:**
 
