@@ -11,19 +11,20 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 # Python 
 - [X] Introduction
-- [ ] Data structures
-- [ ] Numpy
-- [ ] Pandas
-- [ ] Matplotlib
+- [X] Data structures
+- [X] Numpy
+- [X] Pandas
+- [X] Matplotlib
 
 **Course Status:**
-In progress
+Done
 
 **Link of work:**
 
+[Deploy a Flask API project]
+
 [Hacker rank Python badge]
-[Scraping web]
-[Flask python API] 
+
 [Hacker rank Problem solving badge] 
 
 ---
@@ -47,7 +48,7 @@ In progress
 **Link of work:**
 
 [Hacker rank SQL badge]
-
+ 
 [Data using Twitter API]
 
 ---
