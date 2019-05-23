@@ -9,7 +9,10 @@ After hours of searching online for resources to learn AI, I have collated a cur
 > - 🐇 Participating in a competition
 > - 👨‍💻 Open source contribution
 
+
+
 # Python 
+
 - [ ] Introduction
 - [ ] Data structures
 - [ ] Numpy
@@ -21,11 +24,27 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 **Link of work:**
 
-*Example:* 
+*Example*: 
 
 [Python web scraping project - Extract image for image recognition model]
 
 [Flask API deploy] 
+
+
+
+# Data extraction and preparation
+
+- [ ] Data cleaning and preparation
+- [ ] Data manipulation – e.g. sorting, filtering, aggregating and other functions
+
+**Course Status:**
+
+**Link of work:**
+*Example*: 
+
+[Hacker rank SQL badge]
+
+[Data using Twitter API]
 
 
 
@@ -38,22 +57,9 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 **Link of work:**
 
-*Example:* 
+*Example*:
 
 [Kaggle kernels: Visualize reasons for depression/suicide] 
-
-
-
-# Data extraction and preparation
-
-- [ ] 
-
-**Course Status:**
-
-**Link of work:**
-*Example:* [Hacker rank SQL badge]
-
-[Data using Twitter API]
 
 
 
@@ -74,4 +80,18 @@ After hours of searching online for resources to learn AI, I have collated a cur
 **Course Status:**
 
 **Link of work:**
-*Example:* [Kaggle Expert level]
+
+*Example*: 
+
+[Kaggle Expert level]
+
+
+
+# Deep learning
+
+- [x] [Deep learning nanodegree](<https://in.udacity.com/course/deep-learning-nanodegree--nd101>)
+
+**Course Status:** 
+
+**Link of work:** 
+
