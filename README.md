@@ -9,7 +9,10 @@ After hours of searching online for resources to learn AI, I have collated a cur
 > - 🐇 Participating in a competition
 > - 👨‍💻 Open source contribution
 
+
+
 # Python 
+
 - [ ] Introduction
 - [ ] Data structures
 - [ ] Numpy
@@ -31,7 +34,7 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 # Exploratory data analysis 
 
-- [ ] Visualisations
+- [ ] Visualizations
   
 
 **Course Status:** [In progress / Done]
@@ -75,3 +78,9 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 **Link of work:**
 *Example:* [Kaggle Expert level]
+
+
+
+### Resources
+
+- <https://www.analyticsvidhya.com/blog/2018/07/mystory-became-a-machine-learning-expert-10-months/>
