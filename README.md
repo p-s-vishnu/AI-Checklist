@@ -1,4 +1,5 @@
 # AI-Checklist-2019
+## My current progress
 
 After hours of searching online for resources to learn AI, I have collated a curriculum to learn AI in 2019. 
 
@@ -21,7 +22,7 @@ Done
 
 **Link of work:**
 
-[Deploy a Flask API project]
+[Deploy a Flask API project - Loan status prediction](https://github.com/p-s-vishnu/Loan-status-predictor)
 
 [Hacker rank Python badge]
 
@@ -30,13 +31,13 @@ Done
 ---
 # Exploratory data analysis 
 
-- [ ] Visualizations
+- [X] Visualizations
 
-**Course Status:**
+**Course Status:** Done
 
 **Link of work:**
 
-[Kaggle kernels]
+[Kaggle kernel - Breat cancer EDA](https://www.kaggle.com/qwertypsv/who-will-surv)
 
 ---
 # Data extraction and preparation
