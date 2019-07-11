@@ -22,7 +22,7 @@ Done
 
 **Link of work:**
 
-[Deploy a Flask API project - Loan status prediction](https://github.com/p-s-vishnu/Loan-status-predictor)
+📦 [Deploy a Flask API project - Loan status prediction](https://github.com/p-s-vishnu/Loan-status-predictor)
 
 [Hacker rank Python badge]
 
@@ -37,7 +37,7 @@ Done
 
 **Link of work:**
 
-[Kaggle kernel - Breat cancer EDA](https://www.kaggle.com/qwertypsv/who-will-surv)
+📦 [Kaggle kernel - Breast cancer EDA](https://www.kaggle.com/qwertypsv/who-will-surv)
 
 ---
 # Data extraction and preparation
