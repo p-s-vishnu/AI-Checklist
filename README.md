@@ -30,6 +30,10 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 [Flask API deploy] 
 
+[Hacker rank Python badge]
+
+[Hacker rank Problem solving badge] 
+
 
 
 # Exploratory data analysis 
