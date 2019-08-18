@@ -13,22 +13,22 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 # Python 
 
-- [ ] Introduction
-- [ ] Data structures
-- [ ] Numpy
-- [ ] Pandas
-- [ ] Matplotlib
-  
+- [X] Introduction
+- [x] Data structures
+- [x] Numpy
+- [x] Pandas
+- [x] Matplotlib
 
-**Course Status:** [In progress / Done]
+**Course Status:**
+Done
 
 **Link of work:**
 
 *Example:* 
 
-[Python web scraping project - Extract image for image recognition model]
-
 [Flask API deploy] 
+
+[Python end to end project]
 
 [Hacker rank Python badge]
 
@@ -47,7 +47,7 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 *Example:* 
 
-[Kaggle kernels: Visualize reasons for depression/suicide] 
+[Kaggle kernels] 
 
 
 
