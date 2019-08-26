@@ -13,53 +13,54 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 # Python 
 
-- [ ] Introduction
-- [ ] Data structures
-- [ ] Numpy
-- [ ] Pandas
-- [ ] Matplotlib
-  
+- [X] Introduction
+- [x] Data structures
+- [x] Numpy
+- [x] Pandas
+- [x] Matplotlib
 
-**Course Status:** [In progress / Done]
+**Course Status:**
+Done
 
 **Link of work:**
 
-*Example*: 
-
-[Python web scraping project - Extract image for image recognition model]
+*Example:* 
 
 [Flask API deploy] 
 
+[Python end to end project]
 
+[Hacker rank Python badge]
 
-# Data extraction and preparation
-
-- [ ] Data cleaning and preparation
-- [ ] Data manipulation – e.g. sorting, filtering, aggregating and other functions
-
-**Course Status:**
-
-**Link of work:**
-*Example*: 
-
-[Hacker rank SQL badge]
-
-[Data using Twitter API]
+[Hacker rank Problem solving badge] 
 
 
 
 # Exploratory data analysis 
 
-- [ ] Visualisations
+- [ ] Visualizations
   
 
 **Course Status:** [In progress / Done]
 
 **Link of work:**
 
-*Example*:
+*Example:* 
 
-[Kaggle kernels: Visualize reasons for depression/suicide] 
+[Kaggle kernels] 
+
+
+
+# Data extraction and preparation
+
+- [ ] 
+
+**Course Status:**
+
+**Link of work:**
+*Example:* [Hacker rank SQL badge]
+
+[Data using Twitter API]
 
 
 
@@ -80,18 +81,10 @@ After hours of searching online for resources to learn AI, I have collated a cur
 **Course Status:**
 
 **Link of work:**
-
-*Example*: 
-
-[Kaggle Expert level]
+*Example:* [Kaggle Expert level]
 
 
 
-# Deep learning
+### Resources
 
-- [x] [Deep learning nanodegree](<https://in.udacity.com/course/deep-learning-nanodegree--nd101>)
-
-**Course Status:** 
-
-**Link of work:** 
-
+- <https://www.analyticsvidhya.com/blog/2018/07/mystory-became-a-machine-learning-expert-10-months/>
