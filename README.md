@@ -14,7 +14,7 @@ After hours of searching online for resources to learn AI, I have collated a cur
 # Python 
 
 - [X] Introduction
-- [x] Data structures
+- [ ] Data structures
 - [x] Numpy
 - [x] Pandas
 - [x] Matplotlib
