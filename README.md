@@ -11,6 +11,8 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 
 
+Denote progress either in-progress (:running:) or completed (:trophy:).
+
 # Python 
 
 - [X] Introduction
@@ -19,18 +21,14 @@ After hours of searching online for resources to learn AI, I have collated a cur
 - [x] Pandas
 - [x] Matplotlib
 
-**Course Status:**
-Done
+**Course Status:** :running:
 
 **Link of work:**
 
-*Example:* 
+- [Hacker rank Python badge](https://www.hackerrank.com/qwertypsv)
+- [Deploy a Python end to end project]
 
-[Flask API deploy] 
-
-[Python end to end project]
-
-[Hacker rank Python badge]
+*Other examples of link of work:*
 
 [Hacker rank Problem solving badge] 
 
@@ -41,11 +39,13 @@ Done
 - [ ] Visualizations
   
 
-**Course Status:** [In progress / Done]
+**Course Status:** :running:
 
 **Link of work:**
 
-*Example:* 
+- [EDA: Forming a new football team]
+
+*Other examples of link of work:*
 
 [Kaggle kernels] 
 
@@ -64,9 +64,9 @@ Done
 
 
 
-# Feature engineering 
+# Math and Stats 
 
-- [ ] [Google cloud feature engineering](https://www.coursera.org/learn/feature-engineering)
+- [ ] 
 
 **Course Status:**
 
@@ -82,6 +82,16 @@ Done
 
 **Link of work:**
 *Example:* [Kaggle Expert level]
+
+
+
+# Reinforcement Learning
+
+- [ ] Udacity Deep reinforcement learning
+
+**Course Status:**
+
+**Link of work:**
 
 
 
