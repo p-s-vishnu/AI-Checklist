@@ -16,3 +16,7 @@
 - [ ] Start pitching using emails, use `site:linkedin.com <company name> technical recruiter`
 - [ ] Ask friends for referrals.
 - [ ] Solve a random problem that the company might be facing and connect.
+
+## Reference
+
+- https://youtu.be/3BRLGRqj8ps
