@@ -11,7 +11,7 @@ After hours of searching online for resources to learn AI, I have collated a cur
 
 
 
-Denote progress either in-progress (:running:) or completed (:trophy:).
+Denote progress status as either in-progress (:running:) or completed (:trophy:).
 
 # Python 
 
@@ -36,7 +36,7 @@ Denote progress either in-progress (:running:) or completed (:trophy:).
 
 # Exploratory data analysis 
 
-- [ ] Visualizations
+- [x] Visualizations in Seaborn
   
 
 **Course Status:** :running:
