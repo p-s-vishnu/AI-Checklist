@@ -6,6 +6,14 @@ select * from departments d inner join employees e on d.department_id = e.depart
 select * from departments d inner join employees e on d.department_id = e.department_id and d.manager_id = e.employee_id; -- 11
 select * from departments d inner join employees e on d.department_id = e.department_id or d.manager_id = e.employee_id; -- 106
 
+
+select * 
+from locations l left outer join departments d on  l.location_id = d.location_id
+order by city;
+
+# Cross product is a set operation
+select * from countries,regions; 
+
 select * from 
 employees e inner join jobs j on
 e.salary between j.min_salary and j.max_salary
