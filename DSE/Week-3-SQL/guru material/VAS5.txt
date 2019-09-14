@@ -1,0 +1,153 @@
+CREATE TABLE BRANCH(bname varchar(20),
+                    bcity varchar(20),
+                    assets real,
+        CONSTRAINT BRPK PRIMARY KEY(bname));
+
+
+
+
+
+CREATE TABLE CUSTOMER(cname varchar(20),
+                      street varchar(20),
+                      city varchar(20),
+         CONSTRAINT accpk primary key(cname));
+
+
+
+CREATE TABLE ACCOUNT(accno INTEGER,
+                     bname varchar(20),
+                     balance real,
+         CONSTRAINT accno primary key(accno),
+         CONSTRAINT ACFK FOREIGN KEY(bname)
+         references BRANCH(bname)ON DELETE CASCADE);
+
+
+
+create table DEPOSITOR1(cname varchar(20),
+                       accno integer,
+         CONSTRAINT DPK primary key (cname, accno),
+         CONSTRAINT DFK FOREIGN KEY(accno)
+         references ACCOUNT(accno) ON DELETE CASCADE,
+         CONSTRAINT DFK1 foreign key(cname)
+         references CUSTOMER(cname));
+
+
+
+
+create table LOAN(loanno integer,
+                  bname varchar(20),
+                  amount real,
+         CONSTRAINT lpk primary key(loanno),
+         CONSTRAINT lfk FOREIGN KEY(bname)
+         REFERENCES BRANCH (bname) ON DELETE CASCADE);
+
+
+CREATE TABLE BORROWER(cname varchar(20),
+                      loanno integer,
+         CONSTRAINT bwpk primary key(cname, loanno),
+         CONSTRAINT bwFK FOREIGN KEY(cname)
+         REFERENCES CUSTOMER(cname),
+         CONSTRAINT BFK FOREIGN KEY(loanno)
+         REFERENCES LOAN(loanno));
+
+
+
+
+
+INSERT INTO BRANCH values('jayanagar','bangalore','50000000');
+INSERT INTO BRANCH values('malleshwaram','bangalore','30000000');
+INSERT INTO BRANCH values('main','delhi','80000000');
+INSERT INTO BRANCH values('ecr road','chennai','20000000');
+INSERT INTO BRANCH values('green park','mumbai','70000000');
+
+
+
+INSERT INTO ACCOUNT values('565','ecr road','25890.90');
+INSERT INTO ACCOUNT values('654','jayanagar','12670.60');
+INSERT INTO ACCOUNT values('122','green park','90450.70');
+INSERT INTO ACCOUNT values('455','malleshwaram','45880.90');
+INSERT INTO ACCOUNT values('212','main','55550.50');
+INSERT INTO ACCOUNT values('989','ecr road','23900.50');
+INSERT INTO ACCOUNT values('777','main','12056.60');
+
+
+INSERT INTO CUSTOMER values('ram','jayanagar','bangalore');
+INSERT INTO CUSTOMER values('ramya','malleshwaram','bangalore');
+INSERT INTO CUSTOMER values('shyam','mg road','delhi');
+INSERT INTO CUSTOMER values('sandhya','green park','mumbai');
+INSERT INTO CUSTOMER values('ramkumar','ecr road','chennai');
+
+
+
+INSERT INTO DEPOSITOR1 values('sandhya','565');
+INSERT INTO DEPOSITOR1 values('ramya','654');
+INSERT INTO DEPOSITOR1 values('ramya','455');
+INSERT INTO DEPOSITOR1 values('sandhya','989');
+INSERT INTO DEPOSITOR1 values('ram','212');
+INSERT INTO DEPOSITOR1 values('ramkumar','122');
+INSERT INTO DEPOSITOR1 values('shyam','989');
+INSERT INTO DEPOSITOR1 values('ram','777');
+
+
+
+
+
+INSERT INTO LOAN values('1001','jayanagar','150000.50');
+INSERT INTO LOAN values('1002','ecr road','50000.00');
+INSERT INTO LOAN values('1003','malleshwaram','25000.00');
+INSERT INTO LOAN values('1004','green park','45000.00');
+INSERT INTO LOAN values('1005','main','89000.00');
+
+INSERT INTO BORROWER values('ram','1001');
+INSERT INTO BORROWER values('shyam','1002');
+INSERT INTO BORROWER values('ramya','1003');
+INSERT INTO BORROWER values('sandhya','1004');
+INSERT INTO BORROWER values('ramkumar','1005');
+
+
+
+select d.cname
+from ACCOUNT a, DEPOSITOR1 d
+where d.accno=a.accno and bname='main'
+group by d.cname
+having count(d.accno)>=2;
+
+CNAME
+--------------------
+ram
+
+select d.cname
+from BRANCH b, ACCOUNT a, DEPOSITOR1 d
+where b.bname=a.bname and a.accno=d.accno and b.bcity='&city'
+group by d.cname
+having count(DISTINCT b.bname)=(select count(bname)
+                                from BRANCH
+                                where bcity='&city');
+
+
+CNAME
+--------------------
+ramya
+
+
+delete from ACCOUNT
+where bname IN(select bname
+               from branch
+               where bcity='&city');
+
+
+1 row deleted.
+
+
+       
+
+
+
+
+
+
+
+
+
+
+

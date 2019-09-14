@@ -1,0 +1,186 @@
+create table student (snum varchar(3),
+                       sname varchar(5),
+                       major varchar(3),
+                       lev varchar(2),
+                       age integer,
+                       constraint snumpk primary key(snum));
+
+create table faculty(fid varchar(3),
+                     fname varchar(10),
+                     deptid integer,
+                     constraint fidpk primary key(fid));
+
+create table class(cname varchar(5),
+                    meetsat varchar(4),
+                    room varchar(4),
+                    fid varchar(3),
+                    constraint cnamepk primary key(cname),
+                    constraint fidfk foreign key(fid)
+                    references faculty(fid));
+
+create table enrolled(snum varchar(3),
+                       cname varchar(5),
+                       constraint enrpk primary key(snum,cname),
+                       constraint snumfk foreign key(snum)
+                       references student(snum),
+                       constraint cnamefk foreign key(cname)
+                       references class(cname));
+
+
+insert into student values('s1','barti','cs','jr','18');
+insert into student values('s2','sonu','ec','jr','19');
+insert into student values('s3','raju','ee','jr','18');
+insert into student values('s4','ravi','is','sr','20');
+insert into student values('s5','rama','cs','sr','21');
+insert into student values('s6','ram','me','sr','21');
+
+
+insert into faculty values('501','allen','1001');
+insert into faculty values('502','scott','1002');
+insert into faculty values('503','divya','1003');
+insert into faculty values('504','sinha','1004');
+insert into faculty values('505','harshith','1005');
+
+
+insert into class values('se','9am','r128','504');
+insert into class values('ss','11am','r129','504');
+insert into class values('fafl','2pm','r130','502');
+insert into class values('os','9am','r131','503');
+insert into class values('dbms','10am','r128','505');
+insert into class values('ds','12am','r130','504');
+insert into class values('c++','4pm','r131','504');
+insert into class values('cn','12pm','r132','504');
+
+
+insert into enrolled values('s1','se');
+insert into enrolled values('s1','dbms');
+insert into enrolled values('s1','os');
+insert into enrolled values('s2','se');
+insert into enrolled values('s2','dbms');
+insert into enrolled values('s3','os');
+insert into enrolled values('s4','os');
+insert into enrolled values('s5','dbms');
+insert into enrolled values('s6','se');
+insert into enrolled values('s6','os');
+insert into enrolled values('s5','os');
+insert into enrolled values('s1','fafl');
+
+select * from student;
+
+SNU SNAME MAJ LE        AGE
+--- ----- --- -- ----------
+s1  barti cs  jr         18
+s2  sonu  ec  jr         19
+s3  raju  ee  jr         18
+s4  ravi  is  sr         20
+s5  rama  cs  sr         21
+s6  ram   me  sr         21
+
+select * from faculty;
+
+FID FNAME          DEPTID
+--- ---------- ----------
+501 allen            1001
+502 scott            1002
+503 divya            1003
+504 sinha            1004
+505 harshith         1005
+
+select * from class;
+CNAME MEET ROOM FID
+----- ---- ---- ---
+se    9am  r128 504
+ss    11am r129 504
+fafl  2pm  r130 502
+os    9am  r131 503
+dbms  10am r128 505
+ds    12am r130 504
+c++   4pm  r131 504
+cn    12pm r132 504
+
+select * from enrolled;
+SNU CNAME
+--- -----
+s1  dbms
+s1  fafl
+s1  os
+s1  se
+s2  dbms
+s2  se
+s3  os
+s4  os
+s5  dbms
+s5  os
+s6  os
+s6  se
+
+
+select s.sname
+from  student s , class  c , faculty  f , enrolled  e
+where f.fid=c.fid and
+      c.cname=e.cname and
+      e.snum=s.snum and 
+      f.fname='harshith' and
+      s.lev='jr';
+
+SNAME
+-----
+sonu
+barti
+
+
+select c.cname
+from class c
+where c.room='r128'
+  OR
+     cname in(select e.cname
+              from enrolled e
+              group by e.cname
+              having count(*)>=5);
+
+CNAME
+-----
+se
+os
+dbms
+
+select s.sname
+from student s
+where s.snum in(select e1.snum
+                from enrolled e1,enrolled e2,class c1,class c2
+                where e1.snum=e2.snum  and
+                      e1.cname=c1.cname and
+                      e2.cname=c2.cname and
+                      c1.meetsat=c2.meetsat and
+                      e1.cname<>e2.cname);
+SNAME
+-----
+barti
+ram
+
+select f.fname
+from faculty f
+where  eXISTS((select distinct c.room
+                  from class c)
+                   MINUS
+                  (select distinct c1.room
+                   from  class c1
+                    where c1.fid=f.fid));
+FNAME
+----------
+sinha
+
+select f.fname
+from faculty f
+where 5 > (select count(e.snum)
+           from enrolled e,class c
+           where e.cname=c.cname and
+                 f.fid=c.fid);
+
+FNAME
+----------
+allen
+scott
+sinha
+harshith
+

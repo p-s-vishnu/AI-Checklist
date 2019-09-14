@@ -1,0 +1,161 @@
+CREATE TABLE AIRCRAFT(aid integer,
+                      aname varchar(9),
+                      crusingrange number,
+                      CONSTRAINT aidPK PRIMARY KEY(aid));
+
+
+
+
+
+CREATE TABLE EMPLOYEES(eid integer,
+                       ename varchar(9),
+                       salary number,
+                       CONSTRAINT eidPK PRIMARY KEY(eid));
+
+
+CREATE TABLE CERTIFIED (eid integer,
+                        aid integer,
+                        CONSTRAINT eidCPK PRIMARY KEY (eid, aid),
+                        CONSTRAINT eidFK FOREIGN KEY(eid)
+                        REFERENCES EMPLOYEES (eid),
+                        CONSTRAINT aidFK FOREIGN KEY (aid)
+                        REFERENCES AIRCRAFT(aid));
+
+
+
+
+
+
+CREATE TABLE FLIGHTS(fno integer,
+                     source varchar(9),
+                     destination varchar(9),
+                     distance number,
+                     departs date,
+                     arrives date,
+                     price real,
+                     CONSTRAINT fnoPK PRIMARY KEY(fno),
+                     CONSTRAINT fnoFK FOREIGN KEY(fno)
+                     REFERENCES AIRCRAFT(aid));
+
+
+
+
+
+INSERT INTO AIRCRAFT VALUES('101', 'boeing', '2000');
+INSERT INTO AIRCRAFT VALUES('102', 'kingfiser', '1000');
+INSERT INTO AIRCRAFT VALUES('103', 'boeing1', '1500');
+INSERT INTO AIRCRAFT VALUES('104', 'jet', '2500');
+INSERT INTO AIRCRAFT VALUES('105', 'spicejet', '3000');
+
+
+INSERT INTO EMPLOYEES VALUES('1001', 'RAM', '85000');
+INSERT INTO EMPLOYEES VALUES('1002', 'shyam', '45000');
+INSERT INTO EMPLOYEES VALUES('1003', 'creeta', '82000');
+INSERT INTO EMPLOYEES VALUES('1004', 'ramya', '90000');
+INSERT INTO EMPLOYEES VALUES('1005', 'ramkumar', '91000');
+
+
+INSERT INTO CERTIFIED VALUES('1001', '102');
+INSERT INTO CERTIFIED VALUES('1001', '103');
+INSERT INTO CERTIFIED VALUES('1001', '101');
+INSERT INTO CERTIFIED VALUES('1001', '104');
+INSERT INTO CERTIFIED VALUES('1002', '102');
+INSERT INTO CERTIFIED VALUES('1002', '101');
+INSERT INTO CERTIFIED VALUES('1003', '105');
+INSERT INTO CERTIFIED VALUES('1005', '101');
+INSERT INTO CERTIFIED VALUES('1004', '104');
+INSERT INTO CERTIFIED VALUES('1002', '105');
+
+INSERT INTO FLIGHTS VALUES('101', 'bangalore', 'frankfort', '2000', to_date('18/09/2012 12:20','dd/mm/yyyy hh24:mi'), to_date('18/09/2012 23:12','dd/mm/yyyy hh24:mi'), '60000');
+INSERT INTO FLIGHTS VALUES('102', 'bangalore', 'newdelhi', '2000', to_date('17/09/2012 1:23','dd/mm/yyyy hh24:mi'), to_date('17/09/2012 4:12','dd/mm/yyyy hh24:mi'), '45000.99');
+INSERT INTO FLIGHTS VALUES('103', 'bangalore', 'singapore', '1500',to_date('14/10/2012 22:45','dd/mm/yyyy hh24:mi'), to_date('15/10/2012 11:56','dd/mm/yyyy hh24:mi'), '56000.80');
+INSERT INTO FLIGHTS VALUES('104', 'bangalore', 'frankfort', '2000', to_date('23/09/2012 06:08','dd/mm/yyyy hh24:mi'), to_date('23/09/2012 20:56', 'dd/mm/yyyy hh24:mi'),'70000.90');
+INSERT INTO FLIGHTS VALUES('105', 'bangalore', 'canada', '3000', to_date('21/09/2012 06:30', 'dd/mm/yyyy hh24:mi'),to_date('21/09/2012 07:45', 'dd/mm/yyyy hh24:mi'),'50500.99');
+
+
+
+select a.aname
+from AIRCRAFT a
+where a.aid IN ((select c.aid
+                 from CERTIFIED c, EMPLOYEES e
+                 where c.eid=e.eid)
+             MINUS
+                (select c.aid
+                 from CERTIFIED c, EMPLOYEES e
+                 where c.eid=e.eid and e.salary<80000));
+
+
+ANAME
+---------
+boeing1
+jet
+
+
+
+
+select c.eid, MAX(a.crusingrange)
+from CERTIFIED c, AIRCRAFT a
+where c.aid=a.aid 
+group by c.eid 
+having count(*)>3;
+
+       EID MAX(A.CRUSINGRANGE)
+---------- -------------------
+      1001                2500
+
+
+
+
+select distinct E.ename
+from EMPLOYEES E
+WHERE E.salary<(select min(F.price)
+                from FLIGHTs F
+                where F.source='bangalore' and F.destination='frankfort');
+
+
+ENAME
+---------
+shyam
+
+
+select a.aname, a.aid, avg(e.salary)
+from AIRCRAFT a, EMPLOYEES e, CERTIFIED c
+where a.aid=c.aid and
+      c.eid=e.eid and
+      a.crusingrange>1000
+group by a.aid, a.aname;
+
+
+ANAME            AID AVG(E.SALARY)
+--------- ---------- -------------
+boeing1          103         85000
+jet              104         87500
+boeing           101    73666.6667
+spicejet         105         63500
+
+
+select e.ename
+from AIRCRAFT a, EMPLOYEES e, CERTIFIED c
+where a.aid=c.aid and e.eid=c.eid and a.aname LIKE 'boeing%';
+
+ENAME
+---------
+RAM
+shyam
+ramkumar
+RAM
+
+
+
+
+select a.aid
+from AIRCRAFT a
+where a.crusingrange>=(select min(f.distance)
+                       from FLIGHTS f
+where f.source='bangalore' and f.destination='newdelhi');
+
+       AID
+----------
+       101
+       104
+       105

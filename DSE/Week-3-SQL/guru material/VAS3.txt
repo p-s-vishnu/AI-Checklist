@@ -1,0 +1,232 @@
+CREATE TABLE STUDENTS (regno varchar(3),
+                      name varchar(9),
+                      major varchar(2),
+                      bdate date,
+                      CONSTRAINT regnoPK primary key(regno));
+
+
+
+
+
+CREATE TABLE COURSE(courseno integer,
+                    cname varchar(4),
+                    dept varchar(2),
+                    CONSTRAINT coursenoPK primary key(courseno));
+
+
+
+CREATE TABLE ENROLL(regno varchar(3),
+                    courseno integer,
+                    sem integer,
+                    marks integer,
+                    CONSTRAINT rcnoPK PRIMARY KEY (regno, courseno,sem),
+                    CONSTRAINT regnoFK foreign key(regno)
+                    REFERENCES STUDENTS (regno),
+                    CONSTRAINT coursenoFK FOREIGN KEY(courseno)
+                    REFERENCES COURSE (courseno));
+
+
+
+CREATE TABLE TEXT(book_isbn integer,
+                  book_title varchar(30),
+                  publisher varchar(30),
+                  author varchar(20),
+                  CONSTRAINT book_isbnPK primary key(book_isbn));
+
+
+
+
+
+CREATE TABLE BOOK_ADOPT(courseno integer,
+                        sem integer,
+                        book_isbn integer,
+                        CONSTRAINT cbPK PRIMARY KEY(courseno,sem),
+                        CONSTRAINT corsenoFK FOREIGN KEY(courseno)
+                        REFERENCES COURSE(courseno),
+                        CONSTRAINT book_isbn FOREIGN KEY(book_isbn)
+                        REFERENCES TEXT(book_isbn));
+			
+
+
+
+ INSERT INTO STUDENTS VALUES('001', 'RAM',      'CS', to_date('01/01/1990','dd/mm/yyyy'));
+ INSERT INTO STUDENTS VALUES('002', 'santhosh', 'EC', to_date('12/02/1991','dd/mm/yyyy'));
+ INSERT INTO STUDENTS VALUES('003', 'sandhya',  'IS', to_date('23/06/1992','dd/mm/yyyy'));        
+ INSERT INTO STUDENTS VALUES('004', 'nadiya',   'CS', to_date('13/06/1992','dd/mm/yyyy'));      
+ INSERT INTO STUDENTS VALUES('005', 'ramya',    'cs', to_date('12/12/1993','dd/mm/yyyy')); 
+ INSERT INTO STUDENTS VALUES('006', 'ramesh',   'EC', to_date('12/06/1994','dd/mm/yyyy')); 
+
+
+ INSERT INTO COURSE VALUES('11', 'BE',   'CS'); 
+ INSERT INTO COURSE VALUES('22', 'MTEC', 'EC');  
+ INSERT INTO COURSE VALUES('33', 'BE',   'IS');  
+ INSERT INTO COURSE VALUES('44', 'BE',   'EE');  
+ INSERT INTO COURSE VALUES('55', 'BE',   'TC');    
+ 
+
+
+  
+ INSERT INTO ENROLL VALUES('001', '11', '4', '85');
+ INSERT INTO ENROLL VALUES('002', '22', '5', '80');  
+ INSERT INTO ENROLL VALUES('003', '33', '5', '85');  
+ INSERT INTO ENROLL VALUES('004', '11', '5', '80'); 
+ INSERT INTO ENROLL VALUES('005', '55', '5', '80');    
+ INSERT INTO ENROLL VALUES('006', '11', '6', '90');   
+  
+  
+ 
+ 
+INSERT INTO TEXT VALUES('1001', 'INTRO TO DAA',         'PEARSON',     'ULLMAN'); 
+INSERT INTO TEXT VALUES('1002', 'INTRO TO MP',          'PEARSON',     'GODSE');
+INSERT INTO TEXT VALUES('1003', 'OS PRINCIPLES',        'PEARSON',     'LELAND K');
+INSERT INTO TEXT VALUES('1004', 'FUNDAMENTALS OF DBMS', 'PRIMCATION',  'ELMASM');
+INSERT INTO TEXT VALUES('1005', 'MC PRINCIPLES',        'MC GRAWHILL', 'MARTIN');
+
+
+
+INSERT INTO BOOK_ADOPT VALUES('11', '4', '1001');
+INSERT INTO BOOK_ADOPT VALUES('11', '6', '1003');
+INSERT INTO BOOK_ADOPT VALUES('11' ,'5', '1002');
+INSERT INTO BOOK_ADOPT VALUES('22', '4', '1005');
+INSERT INTO BOOK_ADOPT VALUES('33', '6', '1004');
+
+SQL> select * from students;
+
+REG NAME      MA BDATE
+--- --------- -- ---------
+001 RAM       CS 01-JAN-90
+002 santhosh  EC 12-FEB-91
+003 sandhya   IS 23-JUN-92
+004 nadiya    CS 13-JUN-92
+005 ramya     cs 12-DEC-93
+006 ramesh    EC 12-JUN-94
+
+
+SQL> select * from course;
+  COURSENO CNAM DE
+---------- ---- --
+        11 BE   CS
+        22 MTEC EC
+        33 BE   IS
+        44 BE   EE
+        55 BE   TC
+
+
+SQL>  select * from enroll;
+REG   COURSENO        SEM      MARKS
+--- ---------- ---------- ----------
+001         11          4         85
+002         22          5         80
+003         33          5         85
+004         11          5         80
+005         55          5         80
+006         11          6         90
+
+
+SQL> select * from  text;
+ BOOK_ISBN BOOK_TITLE                     PUBLISHER                       AUTHOR
+---------- ------------------------------ ------------------------------  --------------------
+ 1001       INTRO TO DAA                   PEARSON			   ULLMAN
+ 1002       INTRO TO MP                    PEARSON			   GODSE
+ 1003       OS PRINCIPLES                  PEARSON			   LELAND K
+ 1004	    FUNDAMENTALS OF DBMS           PRIMCATION			   ELMASM
+ 1005       MC PRINCIPLES 		   MC GRAWHILL                     MARTIN
+
+
+SQL> select * from  BOOK_ADOPT;
+
+  COURSENO        SEM  BOOK_ISBN
+---------- ---------- ----------
+        11          4       1001
+        11          6       1003
+        11          5       1002
+        22          4       1005
+        33          6       1004
+
+
+
+
+insert into TEXT values ('1006', 'INTRODUCTIO TO VLSI', 'tata mc grawhill', 'dm dhandhere');
+SQL> select * from  text;
+ BOOK_ISBN BOOK_TITLE                     PUBLISHER                       AUTHOR
+---------- ------------------------------ ------------------------------  --------------------
+ 1001       INTRO TO DAA                   PEARSON			   ULLMAN
+ 1002       INTRO TO MP                    PEARSON			   GODSE
+ 1003       OS PRINCIPLES                  PEARSON			   LELAND K
+ 1004	    FUNDAMENTALS OF DBMS           PRIMCATION			   ELMASM
+ 1005       MC PRINCIPLES 		   MC GRAWHILL                     MARTIN
+ 1006       INTRODUCTIO TO VLSI            tata mc grawhill                dm dhandhere
+
+Insert into BOOK_ADOPT VALUES('55', '5', '1006');
+SQL> select * from BOOK_ADOPT;
+
+  COURSENO        SEM  BOOK_ISBN
+---------- ---------- ----------
+        11          4       1001
+        11          6       1003
+        11          5       1002
+        22          4       1005
+        33          6       1004
+        55          5       1006
+
+
+
+
+SELECT T.book_isbn, T.book_title, B.courseno
+FROM TEXT T, BOOK_ADOPT B
+WHERE T.book_isbn=B.book_isbn and
+      B.courseno IN(SELECT BB.courseno
+                    FROM course C, book_adopt BB
+                    WHERE C.courseno=BB.courseno and C.dept='CS'
+group by BB.courseno
+having count(*)>2)
+order by T.book_title;
+
+ BOOK_ISBN BOOK_TITLE                       COURSENO
+---------- ------------------------------ ----------
+      1001 INTRO TO DAA                           11
+      1002 INTRO TO MP                            11
+      1003 OS PRINCIPLES                          11
+
+
+
+select distinct C.dept
+from COURSE C, TEXT T, BOOK_ADOPT B
+WHERE C.courseno=B.courseno and T.book_isbn=B.book_isbn and
+      NOT EXISTS((SELECT y.book_isbn
+                         FROM COURSE x, BOOK_ADOPT y
+                         WHERE x.courseno=y.courseno and x.dept=c.dept)
+              MINUS
+                 (select book_isbn
+                  from TEXT 
+                  WHERE publisher='PEARSON'));  
+
+DE
+--
+CS       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,140 @@
+create table AUTHOR(authorid number,
+                    name varchar(11),
+                    city varchar(11),
+                    country varchar(11),
+             CONSTRAINT aid primary key(authorid));
+
+
+
+
+CREATE table PUBLISHER(publisherid number,
+                       name varchar(10),
+                       city varchar(11),
+                       country varchar(11),
+             CONSTRAINT PIDPK PRIMARY KEY (publisherid));
+
+CREATE TABLE CATEGORY(categoryid number,
+                      description varchar(9),
+              CONSTRAINT cidpk PRIMARY KEY(categoryid));
+
+
+
+CREATE TABLE CATALOG(book_id number,
+                     title varchar(15),
+                     authorid number,
+                      publisherid number,
+                     categoryid number,
+                      year number,
+                      price number,
+              CONSTRAINT book_idpk PRIMARY KEY (book_id),
+              CONSTRAINT aid_fk foreign key(authorid)
+              REFERENCES AUTHOR(authorid),
+              CONSTRAINT pid_pk foreign key(publisherid)
+              REFERENCES PUBLISHER (publisherid),
+              CONSTRAINT cid_fk foreign key(categoryid)
+              REFERENCES CATEGORY(categoryid));        
+
+
+
+CREATE TABLE ORDER_DETAIL(orderno number,
+                          book_id number,
+                          quantity number,
+              CONSTRAINT BOPK PRIMARY KEY(orderno, book_id),
+              CONSTRAINT BIDFK FOREIGN KEY(book_id)
+              REFERENCES CATALOG(book_id));  
+
+commit;
+
+
+
+
+
+INSERT INTO AUTHOR values('500', 'elmasri','bangalore', 'india');
+INSERT INTO AUTHOR values('501', 'dhamidhere','ceylon', 'srilanka');
+INSERT INTO AUTHOR values('502', 'sommerville','bagalkot', 'india');
+INSERT INTO AUTHOR values('503', 'krikavaran','mangalore', 'india');      
+INSERT INTO AUTHOR values('504', 'motwani','bangalore', 'india'); 
+
+INSERT INTO PUBLISHER values('1000', 'pearson', 'bangalore', 'india');
+INSERT INTO PUBLISHER values('1001', 'willey', 'ceylon', 'srilanka');
+INSERT INTO PUBLISHER values('1002', 'mcgrawhill', 'bagalkot', 'india');
+INSERT INTO PUBLISHER values('1003', 'sapna', 'mangalore', 'india');
+INSERT INTO PUBLISHER values('1004', 'sapna', 'bangalore', 'india');
+
+INSERT INTO CATEGORY  values('1', 'novel');
+INSERT INTO CATEGORY  values('2', 'textbook');
+INSERT INTO CATEGORY  values('3', 'storybook');  
+INSERT INTO CATEGORY  values('4', 'philoso'); 
+INSERT INTO CATEGORY  values('5', 'techical');
+
+
+
+
+INSERT INTO CATALOG values('100', 'dbms', '500', '1000', '1','1999', '546');
+INSERT INTO CATALOG values('101', 'aquatic', '503', '1004', '2','2001', '250');
+INSERT INTO CATALOG values('102', 'biography', '504', '1004', '3','2002', '455');
+INSERT INTO CATALOG values('103', 'osprinciple', '501', '1002', '4','2007', '665');
+INSERT INTO CATALOG values('104', 'ss', '502', '1001', '5','1995', '345');
+INSERT INTO CATALOG values('105', 'harrypotter', '501', '1003', '2','2000', '888');
+INSERT INTO CATALOG values('106', 'mcprinciples', '500', '1004', '1','2009', '566');
+INSERT INTO CATALOG values('107', 'fafl', '500', '1001', '4','2010', '543');
+
+
+
+INSERT INTO ORDER_DETAIL values('200', '101', '15');
+INSERT INTO ORDER_DETAIL values('201', '102', '4');
+INSERT INTO ORDER_DETAIL values('202', '106', '7');
+INSERT INTO ORDER_DETAIL values('203', '104', '2');
+INSERT INTO ORDER_DETAIL values('204', '105', '9');
+INSERT INTO ORDER_DETAIL values('205', '103', '14'); 
+INSERT INTO ORDER_DETAIL values('206', '103', '11'); 
+
+
+
+
+
+
+
+select * from AUTHOR;
+
+
+
+select a.authorid, a.name
+from CATALOG c, AUTHOR a
+where c.authorid=a.authorid and c.year>2000 and c.price>(select AVG(price)
+                                                from CATALOG)
+group by a.authorid, a.name
+having count(*)>=2;
+
+  AUTHORID NAME
+---------- -----------
+       500 elmasri
+
+
+
+
+
+
+select c.authorid, a.name, o.book_id
+from AUTHOR a, CATALOG c, ORDER_DETAIL o
+where a.authorid=c.authorid and c.book_id=o.book_id
+group by c.authorid, a.name, o.book_id
+having SUM(o.quantity)=(select MAX(sum(quantity))
+                        from ORDER_DETAIL o
+                        group by o.book_id);
+
+  AUTHORID NAME           BOOK_ID
+---------- ----------- ----------
+       501 dhamidhere         103
+
+
+
+
+
+update CATALOG
+set price=1.1*price
+where publisherid IN(select p.publisherid
+             from PUBLISHER p
+             where name='sapna');
+
+
