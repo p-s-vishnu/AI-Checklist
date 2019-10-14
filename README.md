@@ -1,4 +1,4 @@
-# AI-Checklist-2019
+# AI Checklist
 
 After hours of searching online for resources to learn AI, I have collated a curriculum to learn AI in 2019. 
 
@@ -17,6 +17,7 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 - [X] Introduction
 - [ ] Data structures
+  - [ ] 
 - [x] Numpy
 - [x] Pandas
 - [x] Matplotlib
@@ -36,24 +37,45 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 # Exploratory data analysis 
 
-- [x] Visualizations in Seaborn
+- [x] Visualizations in Seaborn 
   
+  **Alternative**
+  
+- [ ] Visualizations in plotly or matplotlib or Bokeh
 
-**Course Status:** :running:
+**Course Status:** :trophy: 
 
 **Link of work:**
 
-- [EDA: Forming a new football team]
+- [Analyze Graduate admission](https://www.kaggle.com/psvishnu/eda-analyze-graduate-admission)
+
+- [Loan status prediction](https://www.kaggle.com/psvishnu/eda-loan-status-prediction)
+
+- [ML with a heart](https://www.kaggle.com/psvishnu/analysis-cleaning)
+
+- [Football analysis](https://github.com/p-s-vishnu/Form-football-team)
+
+- [HR Analytics]
+
+- 
+
+- [Visualizations - Human activity recognition ]
+
+- [Happiness report analysis]
+
+- [HDFC Eda]
+
+- [AMEX Eda]
+
+  
 
 *Other examples of link of work:*
 
-[Kaggle kernels] 
+[Analyse data from govt. websites] 
 
+# Data extraction
 
-
-# Data extraction and preparation
-
-- [ ] 
+- [ ] [SQL]
 
 **Course Status:**
 
@@ -64,9 +86,9 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 
 
-# Math and Stats 
+# Probability and Statistics
 
-- [ ] 
+- [ ] Khan academy
 
 **Course Status:**
 
@@ -74,9 +96,31 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 
 
+# Linear algebra
+
+- [ ] Khan academy 
+
+**Course Status:**
+
+**Link of work:**
+
+
+
+# Calculus and numerical optimization
+
+- [ ] Multivariate calculus - Khan academy
+
+- [ ] Convex Optimization 
+
+  
+
+  **Course Status:**
+
+  **Link of work:**
+
 # Machine learning 
 
-- [ ] [Art and science of ML](https://www.coursera.org/learn/art-science-ml)
+- [ ] ML by Andrew Ng
 
 **Course Status:**
 
@@ -85,9 +129,41 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 
 
+# Deep learning
+
+- [ ] Udacity Deep learning nanodegree 
+
+**Alternatives**
+
+- [ ]  Fast.ai Deep learning course
+- [ ] Coursera Deep learning specialization 
+
+**Course Status:**
+
+**Link of work:**
+
 # Reinforcement Learning
 
-- [ ] Udacity Deep reinforcement learning
+- [ ] Udacity Deep reinforcement learning 
+
+  **Alternative**
+
+- [ ] Coursera Reinforcement learning specialization
+
+
+**Course Status:**
+
+**Link of work:**
+
+
+
+# Big data analytics
+
+- [ ] Hadoop
+- [ ] Hive
+- [ ] Spark
+- [ ] Apache Kafka
+- [ ] Advanced Spark
 
 **Course Status:**
 
@@ -97,4 +173,5 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 ### Resources
 
-- <https://www.analyticsvidhya.com/blog/2018/07/mystory-became-a-machine-learning-expert-10-months/>
+- Analytics Vidhya blogs
+- Applied AI YouTube videos
