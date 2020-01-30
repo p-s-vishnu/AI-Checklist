@@ -1,6 +1,6 @@
 # AI Checklist
 
-After hours of searching online for resources to learn AI, I have collated a curriculum to learn AI in 2019. 
+After hours of searching online for resources to learn AI, I have collated a curriculum to learn AI/ML. 
 
 > After each course add a link of work to show your competence in the topic, the Work may include the following
 >
@@ -16,32 +16,32 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 # Python 
 
 - [X] Introduction
-- [ ] Data structures
-  - [ ] 
 - [x] Numpy
 - [x] Pandas
 - [x] Matplotlib
+- [ ] Data structures
 
 **Course Status:** :running:
 
 **Link of work:**
 
 - [Hacker rank Python badge](https://www.hackerrank.com/qwertypsv)
-- [Deploy a Python end to end project]
+- [Deploy a Python end to end project](https://github.com/p-s-vishnu/Loan-status-predictor)
 
 *Other examples of link of work:*
 
-[Hacker rank Problem solving badge] 
+Hacker rank Problem solving badge
 
 
 
 # Exploratory data analysis 
 
 - [x] Visualizations in Seaborn 
-  
+
   **Alternative**
-  
-- [ ] Visualizations in plotly or matplotlib or Bokeh
+
+  Visualizations in plotly or matplotlib or Bokeh
+
 
 **Course Status:** :trophy: 
 
@@ -55,40 +55,35 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 - [Football analysis](https://github.com/p-s-vishnu/Form-football-team)
 
-- [HR Analytics]
 
-- 
-
-- [Visualizations - Human activity recognition ]
-
-- [Happiness report analysis]
-
-- [HDFC Eda]
-
-- [AMEX Eda]
-
-  
 
 *Other examples of link of work:*
 
 [Analyse data from govt. websites] 
 
+[Build a dashboard]
+
 # Data extraction
 
-- [ ] [SQL]
+- [ ] [SQL](https://www.mysqltutorial.org/)
 
 **Course Status:**
 
-**Link of work:**
-*Example:* [Hacker rank SQL badge]
+**Link of work:** 
 
-[Data using Twitter API]
+- [Hacker rank SQL badge](https://www.hackerrank.com/psvishnu)
+- [Notes]
+
+*Example:*
+
+[Extract and clean data using Twitter API]
 
 
 
 # Probability and Statistics
 
-- [ ] Khan academy
+- [ ] Khan academy - Prob
+- [ ] Khan academy - Stats
 
 **Course Status:**
 
@@ -106,26 +101,56 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 
 
-# Calculus and numerical optimization
+### ---> Checkpoint 1: Data Analyst <---
 
-- [ ] Multivariate calculus - Khan academy
 
-- [ ] Convex Optimization 
-
-  
-
-  **Course Status:**
-
-  **Link of work:**
 
 # Machine learning 
 
 - [ ] ML by Andrew Ng
+- [ ] Deploying models into production 
+- [ ] Distributed computing
+- [ ] Ensemble techniques
+
+**Course Status:**
+
+**Link of work:** 
+
+- [Kaggle Expert level](https://www.kaggle.com/psvishnu)
+- [Feature engineering - Kaggle]
+- 4 ML projects
+
+*Example:* 
+
+Machine learning project, eg: object detection, loan prediction ,etc
+
+
+
+# Big data analytics
+
+- [ ] Spark
+- [ ] Hadoop
+- [ ] Hive
+- [ ] Apache Kafka
+- [ ] Advanced Spark
+
+**Course Status:**
+
+**Link of work:** [Spark ML Pipeline]
+
+
+
+### ---> Checkpoint 2: ML Engineer <---
+
+
+
+# A/B Testing
+
+- [ ] Udacity A/B testing
 
 **Course Status:**
 
 **Link of work:**
-*Example:* [Kaggle Expert level]
 
 
 
@@ -142,6 +167,8 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 **Link of work:**
 
+
+
 # Reinforcement Learning
 
 - [ ] Udacity Deep reinforcement learning 
@@ -156,18 +183,6 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 **Link of work:**
 
 
-
-# Big data analytics
-
-- [ ] Hadoop
-- [ ] Hive
-- [ ] Spark
-- [ ] Apache Kafka
-- [ ] Advanced Spark
-
-**Course Status:**
-
-**Link of work:**
 
 
 
