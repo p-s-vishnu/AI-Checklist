@@ -7,6 +7,22 @@
 4. OCR libs: Pytesseract, pyocr, opencv
 5. Python parallelization (Documentation): Python's threads are not suitable for CPU-bound tasks, only for I/O-bound.
 6. Serialization and deserialization of python objects, mashaling and pickling. Methods: dump(), dumps(), load(), loads(). [links](https://realpython.com/python-json/).
+```python
+tup = (1,"Vishnu")
+
+with open("Vishnu.obj",'w') as file_obj:
+    serialize = json.dump(tup,file_obj)
+    
+with open("Vishnu.obj",'r') as file_obj:
+    deserialize = json.load(file_obj)
+    
+print(tup, type(tup))
+print(deserialize, type(deserialize))
+print(serialize == deserialize)
+
+tup == tuple(deserialize)
+```
+
 7. import os -> chdir(), mkdir(), listdir(), curdir
 
 8. [JSON](https://realpython.com/python-json/) :If an object is Serialized and the same object is deserialized and compared with each other they might not always be equal.
