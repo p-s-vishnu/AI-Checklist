@@ -67,3 +67,9 @@ message_writer = MessageWriter('hello.txt')
 with message_writer.open_file() as my_file: 
     my_file.write('hello world')
 ```
+
+14. Azure Data Factory: Azure Data Factory (ADF) is a Microsoft Azure PaaS solution for data transformation and load. ETL tool.
+
+15. Databricks is a cloud based data engineering used for processing and transforming massive quantities of data and exploring the data through ML models.
+
+16. LIME - Local Interpretable Model-Agnostic Explanations
