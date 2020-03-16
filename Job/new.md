@@ -73,3 +73,17 @@ with message_writer.open_file() as my_file:
 15. Databricks is a cloud based data engineering used for processing and transforming massive quantities of data and exploring the data through ML models.
 
 16. LIME - Local Interpretable Model-Agnostic Explanations
+
+17. ExcelWriter Object, used to write into multiple sheets
+
+```python
+with ExcelWriter('path_to_file.xlsx', mode='a',
+      date_format='YYYY-MM-DD',
+      datetime_format='YYYY-MM-DD HH:MM:SS'
+      ) as writer:
+    df1.to_excel(writer, sheet_name='Sheet1'),
+    df2.to_excel(writer, sheet_name='Sheet2'),
+    
+```
+
+
