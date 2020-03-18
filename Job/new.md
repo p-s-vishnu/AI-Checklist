@@ -86,4 +86,14 @@ with ExcelWriter('path_to_file.xlsx', mode='a',
     
 ```
 
+18. Regex ignore case flag
+```
+re.search('test', 'TeSt', re.IGNORECASE)
+re.match('test', 'TeSt', re.IGNORECASE)
+re.sub('test', 'xxxx', 'Testing', flags=re.IGNORECASE)
+```
+19. ?: in Regex
 
+It indicates that the subpattern is a non-capture subpattern. That means whatever is matched in pattern eg: (?:\w+\s), even though it's enclosed by () it won't appear in the list of matches
+
+[REad this for ](https://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group-in-regular-expressions) better understanding . Along with example. 
