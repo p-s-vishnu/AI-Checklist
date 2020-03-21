@@ -1,10 +1,13 @@
 ## List
 
-1. ML Flow: Solves three problems 
+1. **ML Flow**: Solves three problems 
    MLFlow tracking, MLFlow Projects, MLFlow Models -> documents the experiments, reusable, reproducible form and managing/deployment of models.
 2. IBM Maximo for asset management solution and CMMS (Computer maintenance management system)
 3. Azure Eventhub: A plug and play scalable module for data ingestion and storing.
 4. OCR libs: Pytesseract, pyocr, opencv
+5. [Argparse module](https://docs.python.org/3/library/argparse.html): A module for easy to use command line interface
+6. Python vars() returns the `__dict__` attribute of the given object, if the there is no attribute then it raise a TypeError exception.
+7. Symbol table in python, A symbol table is a data structure maintained by a compiler which contains all necessary information about the program. These include variable names, methods, classes, etc. There are mainly two types of symbol table - Global globals() and Local locals() symbol table
 5. Python parallelization (Documentation): Python's threads are not suitable for CPU-bound tasks, only for I/O-bound.
 6. Serialization and deserialization of python objects, mashaling and pickling. Methods: dump(), dumps(), load(), loads(). [links](https://realpython.com/python-json/).
 ```python
@@ -23,12 +26,10 @@ print(serialize == deserialize)
 tup == tuple(deserialize)
 ```
 
-7. import os -> chdir(), mkdir(), listdir(), curdir
-
-8. [JSON](https://realpython.com/python-json/) :If an object is Serialized and the same object is deserialized and compared with each other they might not always be equal.
-
+7. [JSON](https://realpython.com/python-json/) :If an object is Serialized and the same object is deserialized and compared with each other they might not always be equal.
+8. import os -> 
+   chdir(), mkdir(), listdir(), curdir
 9. '===' strict comparison.
-
 10. Virtual Environment: 
 ```
 conda create -n venv pip python=3.7  # select python version
@@ -45,6 +46,14 @@ cat < test2 # input will be taken from the file
 cat test.txt | less/more
 ```
 12. `glob` module: The glob module finds all the pathnames matching a specified pattern according to the rules used by the Unix shell, although results are returned in arbitrary order. No tilde expansion is done, but *, ?, and character ranges expressed with [] will be correctly matched.
+
+    ```python
+    import glob
+
+    file_names = glob.glob('*.json')
+    ```
+
+    ​
 
 13. Context Manager [ __enter__() and __exit__() ]: This interface of __enter__() and __exit__() methods which provides the support of with statement in user defined objects is called Context Manager.
 ```python
@@ -68,13 +77,13 @@ with message_writer.open_file() as my_file:
     my_file.write('hello world')
 ```
 
-14. Azure Data Factory: Azure Data Factory (ADF) is a Microsoft Azure PaaS solution for data transformation and load. ETL tool.
+14. **Azure Data Factory**: Azure Data Factory (ADF) is a Microsoft Azure PaaS solution for data transformation and load. ETL tool.
 
-15. Databricks is a cloud based data engineering used for processing and transforming massive quantities of data and exploring the data through ML models.
+15. **Databricks** is a cloud based data engineering used for processing and transforming massive quantities of data and exploring the data through ML models.
 
-16. LIME - Local Interpretable Model-Agnostic Explanations
+16. **LIME** - Local Interpretable Model-Agnostic Explanations
 
-17. ExcelWriter Object, used to write into multiple sheets
+17. **ExcelWriter Object**, used to write into multiple sheets
 
 ```python
 with ExcelWriter('path_to_file.xlsx', mode='a',
@@ -94,6 +103,6 @@ re.sub('test', 'xxxx', 'Testing', flags=re.IGNORECASE)
 ```
 19. ?: in Regex
 
-It indicates that the subpattern is a non-capture subpattern. That means whatever is matched in pattern eg: (?:\w+\s), even though it's enclosed by () it won't appear in the list of matches
+    It indicates that the subpattern is a non-capture subpattern. That means whatever is matched in pattern eg: (?:\w+\s), even though it's enclosed by () it won't appear in the list of matches
 
-[REad this for ](https://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group-in-regular-expressions) better understanding . Along with example. 
+    [REad this for ](https://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group-in-regular-expressions) better understanding . Along with example.

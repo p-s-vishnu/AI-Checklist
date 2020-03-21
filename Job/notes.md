@@ -11,12 +11,16 @@
    ```python
    ' '.ljust(4, ' ') + '-'.center(2, ' ') + '-'.rjust(4, ' ')
    ```
+   ​
 
 2. How tuple, ordered dictionary and frozen set can be useful ?
 
    ```
    # tuple
-   Only count() and index() functions present.
+   Immutable, unordered
+
+   Only count() and index() functions present
+
    # will make the variable a tuple
    >>> singleton = 'hello',  
    >>> len(singleton) # 1
@@ -25,16 +29,15 @@
    Application: While creating a dataframe using a dictionary, if the final order is important you can use ordered dict
 
    # frozen set
+
    ```
+   ​
 
 3. Call by value and call by reference in python?
 
 
    ```
-	
-
-   ```python
-   # Call by value 
+# Call by value 
    def func(n):
        n += 1
     
@@ -54,7 +57,20 @@
 
 6. Generators and decorators with real life application
 
+   ```
+   # Generators
+
+   ```
+
+   ​
+
 7. Map, reduce, itertools, filter, accumulator.
+
+   ```
+
+   ```
+
+   ​
 
 8. What are the various operators in python
 
@@ -73,76 +89,89 @@
 
    ​
 
-2. Sorting algorithms - Buble sort
+2. Sorting algorithms - Bubble sort
 
    ```python
    // Euclidean method
    // Normal approach
    ```
+   ​
 
 3. Write a class , generators, decorator in Python.
 
-4. In what all cases can we use a decorator?
+   ```
+   # class 
+   # generator
+   # Decorators
+   Decorators let you execute code before and after a function.
+   ```
 
-5. Write a code to read a file in batch using its memory address?
+         4. In what all cases can we use a decorator?
+         5. Write a code to read a file in batch using its memory address/files?
+         6. Difference between range and xrange. Since xrange is deprecated in Python 3, write a function to generate the same values without using range() function.
+         7. Find median from data stream? 
+         8. Explain call by value and call by reference in python?
+         Solved above
+         9. Regex and date operations in python
 
-6. Difference between range and xrange. Since xrange is deprecated in Python 3, write a function to generate the same values without using range() function.
 
-7. Find median from data stream? 
+   ## Numpy
 
-   ​
+   - Basic operations
 
----
 
-## Numpy
-
-- Basic operations
-
-```python
+   ```
 a = numpy.array([1,2,3,4], float)
+
 b = numpy.array([5,6,7,8], float)
 
 print a + b                     #[  6.   8.  10.  12.]
+
 print numpy.add(a, b)           #[  6.   8.  10.  12.]
 
 print a - b                     #[-4. -4. -4. -4.]
+
 print numpy.subtract(a, b)      #[-4. -4. -4. -4.]
 
 print a * b                     #[  5.  12.  21.  32.]
+
 print numpy.multiply(a, b)      #[  5.  12.  21.  32.]
 
 print a / b                     #[ 0.2         0.33333333  0.42857143  0.5       ]
+
 print numpy.divide(a, b)        #[ 0.2         0.33333333  0.42857143  0.5       ]
 
 print a % b                     #[ 1.  2.  3.  4.]
+
 print numpy.mod(a, b)           #[ 1.  2.  3.  4.]
 
 print a**b                      #[  1.00000000e+00   6.40000000e+01   2.18700000e+03   6.55360000e+04]
+
 print numpy.power(a, b)         #[  1.00000000e+00   6.40000000e+01   2.18700000e+03   6.55360000e+04]
 
-```
-
+   ```
 - Identity and Eye
 
-```python
-numpy.identity(3) #3 is for  dimension 3 X 3
+   ```
+   numpy.identity(3) #3 is for  dimension 3 X 3
+   ```
 
 numpy.eye(8, 7, k = 1)    # 8 X 7 Dimensional array with first upper diagonal 1.
 
-```
+   ```
 
 - Floor, Ceil and Rint
 
   The *rint* tool rounds to the nearest integer of input element-wise.
 
-```python
+​```python
 my_array = numpy.array([1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9])
 print( numpy.floor(my_array))     #[ 1.  2.  3.  4.  5.  6.  7.  8.  9.]
 
 print (numpy.ceil(my_array))	#[  2.   3.   4.   5.   6.  7.  8.  9. 10.]
 
 print (numpy.rint(my_array))          #[  1.   2.   3.   4.   6.   7.   8.   9.  10.]
-```
+   ```
 
 - Set print option
 
@@ -293,7 +322,24 @@ pd.merge(table1, table2,
          suffixes=('_left','_right')
 ```
 
+4. Multiple ways to read in pandas
 
+   ```python
+   # pd.read_csv()
+
+   # pd.read_clipboard()
+
+   # pd.DataFrame.from_dict()
+   pd.DataFrame.from_dict(data, orient='index',
+                          columns=['A', 'B', 'C', 'D'])
+          A  B  C  D
+   row_1  3  2  1  0
+   row_2  a  b  c  d
+
+   # pd.
+   ```
+
+   ​
 
 **Reference**
 
@@ -315,21 +361,102 @@ pd.merge(table1, table2,
 **Doubts/Notes**
 
 - If the column is alpha numeric `c_1`, `c_10`, `c_2` will be the sorted order.
+
 - Group by is NOT Case sensitive. eg: if you use group by some column and it is having values phone and Phone, both will be consider in the same group. If you want to consider it different then `COLLATE sql_latin1_general_cp1_cs_as`. *A MySQL collation is a set of rules used to compare characters in a particular [character set](https://www.mysqltutorial.org/mysql-character-set/).*
+
 - Count(Distinct) can help in finding per group count
+
 - `RIGHT(CITY, 1) in ('a','e')` similar for left()
+
 - CAST('2003-01-01' AS DATE) 
+
+- Compare Successive Rows Within The Same Table = 
+
+      inventory g1
+      INNER JOIN
+      inventory g2 ON g2.id = g1.id + 1
+
 - ROUND (12345.54, -2), round to a left 
+
+- Loading other databases: `source/directory .. `
+
+- BETWEEN usage : `from students s inner join grades g on s.marks between g.min_mark and g.max_mark`
+
 - Difference between '=' and 'is'
+
+  ```
+  -- `is` is used in cases of Boolean like True, false and NULL
+  whereas, = is used for single integer value
+  ```
+
+  ​
 
 *Things to consider*
 
+- Common maths functions
+
+  ```mysql
+  pow(<col>, n)
+
+  sqrt(<col>)
+
+  mod(<dividend>, <divisor>)
+
+  --  truncates a number to a specified number of decimal places	
+  -- function is similar to the ROUND() BUT no Rounding performed here
+  TRUNCATE(X,D)
+
+  ceil()
+
+  floor()
+
+  abs()
+
+  std(), variance()
+  ```
+
+  ​
+
+- Remove string with numeric values using MS Sql and pandas
+
+  ```
+
+  ```
+
+  ​
+
 - Date functions and aggregation
+
+  ```mysql
+
+  ```
+
+- [Median of a column](https://www.hackerrank.com/challenges/weather-observation-station-20/problem) 
+
+  ```
+  SET @rowindex := -1;
+
+  SELECT
+     round(AVG(g.lat_n), 4)
+  FROM
+     (SELECT @rowindex:=@rowindex + 1 AS rowindex,
+             lat_n
+      FROM station
+      ORDER BY lat_n) AS g
+  WHERE
+  g.rowindex IN (FLOOR(@rowindex / 2) , CEIL(@rowindex / 2));
+  ```
+
+  ​
+
 - Regular expressions in SQL
-- Lead and Lag functions
-- Views in mysql
-- Set a variable `SET @str = '12/31/2019';`
-- Start the MySQL ::: sudo mysql -u root
+  ```where <columns name> regexp ' <expression>'```
+
+- Set a variable `SET @str = '12/31/2019'; select @somthing = <col> from <table>;`
+
+- Start the MySQL ::: `sudo mysql -u root`
+
+  ​
 
 
 
@@ -369,14 +496,10 @@ pd.merge(table1, table2,
    # 7. row_number
    ```
 
-   ​
+
 
 2. How to create a temp, derived, cte tables in mysql
-
-   ```
-   # Common table expression
-
-   ```
+Common table expression
 
    ​
 
@@ -394,16 +517,15 @@ pd.merge(table1, table2,
    ```
 
 
-   /*
    Large database
 
    Consider denormalizing the tables for faster retrieval but while hangling ambiguity
    */
    ```
 
-   ​
+1. Various data types in SQL
 
-4. Various data types in SQL
+> BINARY, CHAR, DATE, DATETIME, TIME,DECIMAL, SIGNED, UNSIGNED .
 
 4. Write a query to display the quarterly report 
 
@@ -452,6 +574,17 @@ pd.merge(table1, table2,
 22. Tell me more about indexing, types and how it is being stored in a database?
 
 23. A binary search tree is given in a database, find the root, leaf and intermediate nodes?
+
+24. 2nd highest paid employee in each department?
+
+    ```
+    select department,  employee_name 
+    from 
+    	(select department, employee_name, dense_rank() over (partition by department order by salary desc) 'ord' from basic_pays) temp 
+    where ord = 2;
+    ```
+
+25. ​
 
     ​
 
@@ -502,66 +635,10 @@ students = [student for student in student_cursors]
 
 ---
 
-## Big data
+## Machine learning
 
-
-
-
-
----
-
-## Statistics
-
-1. What are the various distance measures which can be used and mention its application (eg: manhattan distance)
-
-
----
-
-## Aptitude
-
-
-
-## Blood relation
-
-```
-If A + B means A is the mother of B; A - B means A is the brother B; A % B means A is the father of B and A x B means A is the sister of B, which of the following shows that P is the maternal uncle of Q?
-
-A.	Q - N + M x P
-B.	P + S x N - Q
-C.	P - M + N x Q
-D.	Q - S % P
-```
-
-Ans: C
-
-
-
-```
-If A is the brother of B; B is the sister of C; and C is the father of D, how D is related to A?
-
-A.	Brother
-B.	Sister
-C.	Nephew
-D.	Cannot be determined
-```
-
-Ans: D. Gender cannot be determined, nephew = male, niece is female.
-
-
-
-## Linear algebra
-
-
+1. How linear regression  is different in both ML and Statistics?
 
 
 
 ---
-
-## General / Software engineering 
-
-1. In as much detail as possible explain what happens behind the scenes when a website is being loaded?
-2. Explain  in detail how internet works or how a web page is rendered by the browser?
-3. How do you connec to an SSH and How can you read a file to the system which has lower processing speed and memory and download it to local for analysis?
-4. How can you scrape a website and display the content, consider the fact that the same url will be accessed by multiple users so make sure you are making it more efficient? 
-   5. Consider you are working in a company like Flipkart/Amazon what all questions will you ask your business team to find out the next quarter sales projection?
-      (time spent, number of discounts, etc)
