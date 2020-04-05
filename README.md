@@ -9,7 +9,12 @@ After hours of searching online for resources to learn AI, I have collated a cur
 > - 🐇 Participating in a competition
 > - 👨‍💻 Open source contribution
 
-
+## Objective: Master the following
+1. Computer science fundamentals – algorithms, data structures, computability, and complexity.
+2. One or more programming language -> Python, C++, R, Java
+3. Understanding of basic *Math, Stats and Probability* concepts
+4. Pick your pokemon (start with one and capture the next one):  NLP, Computer Vision, Time series forcasting or Recommendation systems. 
+5. Distributed Computing
 
 Denote progress status as either in-progress (:running:) or completed (:trophy:).
 
@@ -65,9 +70,9 @@ Hacker rank Problem solving badge
 
 # Data extraction
 
-- [ ] [SQL](https://www.mysqltutorial.org/)
+- [X] [SQL](https://www.mysqltutorial.org/)
 
-**Course Status:**
+**Course Status:** :trophy: 
 
 **Link of work:** 
 
