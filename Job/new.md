@@ -106,3 +106,13 @@ re.sub('test', 'xxxx', 'Testing', flags=re.IGNORECASE)
     It indicates that the subpattern is a non-capture subpattern. That means whatever is matched in pattern eg: (?:\w+\s), even though it's enclosed by () it won't appear in the list of matches
 
     [REad this for ](https://stackoverflow.com/questions/3512471/what-is-a-non-capturing-group-in-regular-expressions) better understanding . Along with example.
+
+20. **Lambda functions and APIs**
+```
+Things to consider while deploying an API onto a service like AWS Lambda
+
+1. Size: of the api when uncompressed
+2. Security policies: So that the service is onlu accesible to your white listed IPs
+3. Authentication: If exposing to end customers, how are you planning an API authentication mechanism
+4. Startup time and Timeout: Heavy models take time to be loaded in memory, so is the customer ok waiting for that long also whether the service waiting for the API timeout if it doesnt get the output within a certain timeframe.
+```
