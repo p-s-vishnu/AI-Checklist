@@ -116,3 +116,9 @@ Things to consider while deploying an API onto a service like AWS Lambda
 3. Authentication: If exposing to end customers, how are you planning an API authentication mechanism
 4. Startup time and Timeout: Heavy models take time to be loaded in memory, so is the customer ok waiting for that long also whether the service waiting for the API timeout if it doesnt get the output within a certain timeframe.
 ```
+
+21. **Captum:** Is an opensource extensible library for model interpretability built on PyTorch.
+
+22. **PyTorch Geometric:** Deep learning on irregular input data such as graphs, point clouds, and manifolds. A point cloud is a set of data points in space. Point clouds are generally produced by 3D scanners, which measure many points on the external surfaces of objects around them.eg: Building 3D scans. Manifold is a collection of points forming a certain kind of set, such as those of a topologically closed surface or an analogue of this in three or more dimensions.
+
+22. **skorch** is a high level library for Pytorch that provide full scikitlearn compatibility.
