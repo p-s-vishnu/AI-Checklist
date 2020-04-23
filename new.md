@@ -126,3 +126,5 @@ Things to consider while deploying an API onto a service like AWS Lambda
 23. **Python, pip and Wheel installation:** Install files directly using `pip install <filename.whl>`. But before downloading the whl your must check the right configuration. Your system might be 64 bit OS but the python you installed can be 32 bit, so check the python version by `import platform and print platform.architecture()` to see which version of python you have installed. [link](https://stackoverflow.com/questions/28568070/filename-whl-is-not-supported-wheel-on-this-platform). Some specifications of the whl -eg: `torch-1.4.0+cpu-cp38-cp38-win_amd64.whl` here cp38 is cpython 3.8 and amd64 is the installed Python's architecture.
 
 24. **Docx to JSON** we can use the library *mammoth* to convert docx to html and then use *beautiful soup* to extract JSON from HTML.
+
+25. **Alternative to Pickle**: `joblib` is more efficient on objects that carry large numpy arrays which is often the case for fitted sklearn's estimator.
