@@ -128,3 +128,17 @@ Things to consider while deploying an API onto a service like AWS Lambda
 24. **Docx to JSON** we can use the library *mammoth* to convert docx to html and then use *beautiful soup* to extract JSON from HTML.
 
 25. **Alternative to Pickle**: `joblib` is more efficient on objects that carry large numpy arrays which is often the case for fitted sklearn's estimator.
+
+26. **Permission error while pip install**: [link](https://github.com/googlesamples/assistant-sdk-python/issues/236#issuecomment-383039470)
+You have three options(use only one of them):
+   a. setup a virtual env to install the package (recommended):
+```
+python3 -m venv env
+source ./env/bin/activate 
+python -m pip install google-assistant-sdk[samples]
+```
+   b. Install the package to the user folder:
+python -m pip install --user google-assistant-sdk[samples]
+
+   c. use sudo to install to the system folder (not recommended)
+sudo python -m pip install google-assistant-sdk[samples]
