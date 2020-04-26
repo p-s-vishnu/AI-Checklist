@@ -142,3 +142,5 @@ python -m pip install --user google-assistant-sdk[samples]
 
    c. use sudo to install to the system folder (not recommended)
 sudo python -m pip install google-assistant-sdk[samples]
+
+27. **Right click to open Anaconda prompt** Windows-> Change key values in regedit.exe [link](https://gist.github.com/jiewpeng/8ba446acf329b1801bf91db767d179ea)
