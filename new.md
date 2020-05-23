@@ -149,6 +149,14 @@ sudo python -m pip install google-assistant-sdk[samples]
 
 29. **Ternary operator different format** print(["a","b"][bool("")]) >>>> "a", explanation: when False then "a" else "b"
 
-30. **Some Auto ML Libraries:** 1. `Auto_Viml` a python library for automated ml
-2. `AutoViz` to automatically visulize data.
-3. `pycaret`, this helps a lot as with just one line you can compare 17 different models and that too with cross validation of golden standard.
+30. **Some Auto ML Libraries:** 
+   1. `Auto_Viml` a python library for automated ml
+   2. `AutoViz` to automatically visulize data.
+   3. `pycaret`, this helps a lot as with just one line you can compare 17 different models and that too with cross validation of golden standard.
+   
+31. Some git commands
+   - **gitk** is a graphical history viewer.
+   - **git log --graph**
+   - **git merge --no-ff and --ff-only** no fast forward will create a new commit for the merge operation (similar to merging a pull request)
+   
+32. **Git for data science**, you add the cross validation score and what change led to that score in the commit message. Simple use git log to view the history of scores. [Data Version Control](https://t.co/hI51xDzkOw?amp=1)
