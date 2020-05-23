@@ -148,3 +148,7 @@ sudo python -m pip install google-assistant-sdk[samples]
 28. **OS method to start a file:** os.startfile(path)
 
 29. **Ternary operator different format** print(["a","b"][bool("")]) >>>> "a", explanation: when False then "a" else "b"
+
+30. **Some Auto ML Libraries:** 1. `Auto_Viml` a python library for automated ml
+2. `AutoViz` to automatically visulize data.
+3. `pycaret`, this helps a lot as with just one line you can compare 17 different models and that too with cross validation of golden standard.
