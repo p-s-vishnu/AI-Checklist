@@ -13,8 +13,10 @@ After hours of searching online for resources to learn AI, I have collated a cur
 1. Computer science fundamentals – algorithms, data structures, computability, and complexity.
 2. One or more programming language -> Python, C++, R, Java
 3. Understanding of basic *Math, Stats and Probability* concepts
-4. Pick your pokemon (start with one and capture the next one):  NLP, Computer Vision, Time series forcasting or Recommendation systems. 
+4. Pick your pokemon (start with one and capture the next one):  NLP, Computer Vision, Time series forcasting, Recommendation systems or Reinforcement learning. 
 5. Distributed Computing
+6. Big data
+7. Deep learning
 
 Denote progress status as either in-progress (:running:) or completed (:trophy:).
 
@@ -77,9 +79,9 @@ Hacker rank Problem solving badge
 **Link of work:** 
 
 - [Hacker rank SQL badge](https://www.hackerrank.com/psvishnu)
-- [Notes]
 
 *Example:*
+[Create notes from https://mysqltutorial.org/]
 
 [Extract and clean data using Twitter API]
 
@@ -165,8 +167,8 @@ Machine learning project, eg: object detection, loan prediction ,etc
 
 **Alternatives**
 
-- [ ]  Fast.ai Deep learning course
-- [ ] Coursera Deep learning specialization 
+- Fast.ai Deep learning course
+- Coursera Deep learning specialization 
 
 **Course Status:**
 
@@ -180,7 +182,7 @@ Machine learning project, eg: object detection, loan prediction ,etc
 
   **Alternative**
 
-- [ ] Coursera Reinforcement learning specialization
+- Coursera Reinforcement learning specialization
 
 
 **Course Status:**
