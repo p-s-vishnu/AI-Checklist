@@ -72,7 +72,39 @@ Hacker rank Problem solving badge
 
 # Data extraction
 
-- [X] [SQL](https://www.mysqltutorial.org/)
+- [X] [SQL hackerrank badge](https://www.hackerrank.com/psvishnu)
+
+  Basic:
+    1. SELECT and WHERE for filtering and selection
+    2. COUNT, SUM, MAX, GROUP BY, HAVING for aggregating data
+    3. DISTINCT, COUNT DISTINCT for producing useful distinct lists and distinct aggregates
+    4. OUTER (e.g. LEFT) and INNER JOIN when/where to use them
+    5. Working with time and strings (like expressions, basic manipulations like substring and date conversion)
+    6. Subqueries
+    7. UNION and UNION ALL.
+
+  Intermediate:
+    1. DML/DDL/DCL concepts
+    2. Handling NULLs creatively (e.g. with COALESCE)
+    3. Subqueries and the impact of subqueries on the efficiency of the query
+    4. Basic query tuning
+    5. CAST variables and data types
+    7. CASE statements
+    8. Temporary tables
+    9. Self joins
+    10. Window functions like PARTITION, LEAD, LAG, NTILE
+    11. UDFs (user-defined functions)
+    12. Use of indexes in querying to make operations faster.
+
+  Advanced:
+    1. Common Table Expressions (CTEs) and recursive CTEs
+    2. Dynamic SQL generation
+    3. Query optimization
+    4. Materialized views
+    5. Clustered index
+    6. Cursors
+    7. Minimizing network I/O
+    8. Profilers and execution plans
 
 **Course Status:** :trophy: 
 
