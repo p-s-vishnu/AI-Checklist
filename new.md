@@ -160,3 +160,7 @@ sudo python -m pip install google-assistant-sdk[samples]
    - **git merge --no-ff and --ff-only** no fast forward will create a new commit for the merge operation (similar to merging a pull request)
    
 32. **Git for data science**, you add the cross validation score and what change led to that score in the commit message. Simple use git log to view the history of scores. [Data Version Control](https://t.co/hI51xDzkOw?amp=1)
+
+33. **Google Text to speech api** [sample code](https://github.com/p-s-vishnu/TextToSpeech)
+
+34. **Celluloid** For animating matplotlib graphs. [repo](https://github.com/jwkvam/celluloid)
