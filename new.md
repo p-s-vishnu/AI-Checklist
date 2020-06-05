@@ -164,3 +164,5 @@ sudo python -m pip install google-assistant-sdk[samples]
 33. **Google Text to speech api** [sample code](https://github.com/p-s-vishnu/TextToSpeech)
 
 34. **Celluloid** For animating matplotlib graphs. [repo](https://github.com/jwkvam/celluloid)
+
+35: **pigeonXT**: To label all sorts of data in jupyter notebook [link](https://towardsdatascience.com/quickly-label-data-in-jupyter-lab-999e7e455e9e)
