@@ -168,3 +168,10 @@ sudo python -m pip install google-assistant-sdk[samples]
 35: **pigeonXT**: To label all sorts of data in jupyter notebook [link](https://towardsdatascience.com/quickly-label-data-in-jupyter-lab-999e7e455e9e)
 
 36: **JSON.dump() encoding**: encoding="utf8" and ensure_ascii=False
+
+37. **TQDM for multiple loops**
+```python
+from tqdm import tqdm_notebook
+for outer_loop in tqdm_notebook(range(), desc="outer_loop", leave=True):
+   for inner_loop in tqdm_notebook(range(), desc="inner_loop", leave=False):
+```
