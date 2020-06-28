@@ -175,3 +175,11 @@ from tqdm import tqdm_notebook
 for outer_loop in tqdm_notebook(range(), desc="outer_loop", leave=True):
    for inner_loop in tqdm_notebook(range(), desc="inner_loop", leave=False):
 ```
+
+38. **Simple image conversion :** Emf to Png format, 
+```python
+image_obj = Image.open(image_path)
+buf = io.BytesIO()
+image_obj.save(buf, format='png')
+image_read = buf.getvalue()
+```
