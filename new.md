@@ -183,3 +183,12 @@ buf = io.BytesIO()
 image_obj.save(buf, format='png')
 image_read = buf.getvalue()
 ```
+
+39. **Other ways to iterate df:**  `iterrows(), itertuples()` 
+```python
+for index, row in df.iterrows(): 
+    print (row["Name"], row["Age"]) 
+    
+for row in df.itertuples(index = True, name ='Pandas'): 
+    print (getattr(row, "Name"), getattr(row, "Percentage")) 
+```
