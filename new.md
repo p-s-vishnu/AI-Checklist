@@ -192,3 +192,13 @@ for index, row in df.iterrows():
 for row in df.itertuples(index = True, name ='Pandas'): 
     print (getattr(row, "Name"), getattr(row, "Percentage")) 
 ```
+
+40 Pandas useful functions
+```python
+# Datetime
+Series.dt.day / month/ year
+
+pd.to_datetime( ,format="%d/%m/%Y")
+pd.Series/DataFrame nlargest(n[, column ]) # column if dataframe
+pd.var(ddof=1) # ddof: degree of freedom to determine biased and unbiased variance, unbiased=N-1 and biased=N
+```
