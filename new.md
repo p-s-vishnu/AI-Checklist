@@ -202,3 +202,8 @@ pd.to_datetime( ,format="%d/%m/%Y")
 pd.Series/DataFrame nlargest(n[, column ]) # column if dataframe
 pd.var(ddof=1) # ddof: degree of freedom to determine biased and unbiased variance, unbiased=N-1 and biased=N
 ```
+
+41. **Common distance measures**
+```
+Minkowski distance (Lp), Manhattan Distance(L1), Euclidean distance(L2), Cosine distance (1- Cosine similarity), Hamming distance
+```
