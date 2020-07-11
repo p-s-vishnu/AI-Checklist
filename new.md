@@ -207,3 +207,12 @@ pd.var(ddof=1) # ddof: degree of freedom to determine biased and unbiased varian
 ```
 Minkowski distance (Lp), Manhattan Distance(L1), Euclidean distance(L2), Cosine distance (1- Cosine similarity), Hamming distance
 ```
+
+42. **Static and class method**
+The difference between a static method and a class method is:
+
+- Static method knows nothing about the class and just deals with the parameters
+- Class method works with the class since its parameter is always the class itself. The class method is always attached to a class with first argument as the class itself `cls`.
+[Difference between static and class method:](https://www.programiz.com/python-programming/methods/built-in/classmethod)
+- Factory method
+- Correct instance creation in inheritance
