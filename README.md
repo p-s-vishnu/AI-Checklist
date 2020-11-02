@@ -124,6 +124,17 @@ Hacker rank Problem solving badge
 - [ ] Khan academy - Prob
 - [ ] Khan academy - Stats
 
+## Common questions
+1. T-tests. Know their assumptions. Know how the t distribution relates to the normal distribution.
+
+2. Central Limit Theorem. Know what it means for the distribution of the mean. Understand the magic!
+
+3. Regression assumptions. Know why independence of observations matters and what IID means.
+
+4. Confidence intervals and relationship to hypothesis tests. Discuss relationship to credible intervals.
+
+5. The implications of Bayesian priors vs frequentist perspective. What does it mean for practical decision making?
+
 **Course Status:**
 
 **Link of work:**
