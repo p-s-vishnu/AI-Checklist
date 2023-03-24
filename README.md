@@ -32,13 +32,12 @@ Denote progress status as either in-progress (:running:) or completed (:trophy:)
 
 **Link of work:**
 
-- [Hacker rank Python badge](https://www.hackerrank.com/qwertypsv)
+- [Hacker rank Python badge](https://www.hackerrank.com/psvishnu)
 - [Deploy a Python end to end project](https://github.com/p-s-vishnu/Loan-status-predictor)
 
 *Other examples of link of work:*
 
 Hacker rank Problem solving badge
-
 
 
 # Exploratory data analysis 
@@ -141,15 +140,6 @@ Hacker rank Problem solving badge
 
 
 
-# Linear algebra
-
-- [ ] Khan academy 
-
-**Course Status:**
-
-**Link of work:**
-
-
 
 ### ---> Checkpoint 1: Data Analyst <---
 
@@ -174,24 +164,24 @@ Hacker rank Problem solving badge
 
 Machine learning project, eg: object detection, loan prediction ,etc
 
-
-
-# Big data analytics
-
-- [ ] Spark
-- [ ] Hadoop
-- [ ] Hive
-- [ ] Apache Kafka
-- [ ] Advanced Spark
+### ---> Checkpoint 2: SDE - ML <---
 
 **Course Status:**
 
 **Link of work:** [Spark ML Pipeline]
 
+# Deep learning
 
+- [ ] http://d2l.ai/
 
-### ---> Checkpoint 2: ML Engineer <---
+**Alternatives**
+- Udacity Deep learning nanodegree 
+- Fast.ai Deep learning course
+- Coursera Deep learning specialization 
 
+**Course Status:**
+
+**Link of work:**
 
 
 # A/B Testing
@@ -204,19 +194,16 @@ Machine learning project, eg: object detection, loan prediction ,etc
 
 
 
-# Deep learning
+### ---> Checkpoint 3: Data Scientist / ML Engineer <---
 
-- [ ] Udacity Deep learning nanodegree 
 
-**Alternatives**
+# Big data analytics
 
-- Fast.ai Deep learning course
-- Coursera Deep learning specialization 
-
-**Course Status:**
-
-**Link of work:**
-
+- [ ] Spark
+- [ ] Hadoop
+- [ ] Hive
+- [ ] Apache Kafka
+- [ ] Advanced Spark
 
 
 # Reinforcement Learning
